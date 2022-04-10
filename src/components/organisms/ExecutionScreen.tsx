@@ -156,7 +156,11 @@ const ExecutionScreen = ({
               timer / 1000 >= resolutionInSec
             }
             toggle={() => {
-              if (index === chosenPlace || timer / 1000 >= resolutionInSec) {
+              if (
+                index === chosenPlace ||
+                timer / 1000 < upheavalResolvedInSec ||
+                timer / 1000 >= resolutionInSec
+              ) {
                 return
               }
               setChosenPlace(index)
