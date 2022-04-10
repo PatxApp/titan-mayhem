@@ -1,20 +1,11 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: #282c34;
+  width: 100vw;
+  height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +15,282 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.role__icon {
+  height: 30px;
+  width: 30px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.role__icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.role__icon__position {
+  position: absolute;
+  text-transform: uppercase;
+  background: rgb(180, 0, 0);
+  color: #fff;
+  font-size: 8px;
+  bottom: -2px;
+  right: -2px;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+thead {
+  vertical-align: bottom;
+}
+
+thead tr {
+  text-align: left;
+}
+
+tr td {
+  padding: 3px 5px;
+}
+
+.user__link {
+  text-shadow: 1px 1px 2px black;
+}
+
+table {
+  margin: auto;
+}
+
+tbody > tr:nth-of-type(odd) > * {
+  background: #ccc;
+  color: #333;
+}
+tbody > tr:nth-of-type(even) > * {
+  background: #878787;
+  color: #ddd;
+}
+
+tbody > tr:hover {
+  opacity: 0.8;
+}
+
+.form__radio {
+  display: inline-block;
+  border: 1px solid #000;
+  border-radius: 50%;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  width: 18px;
+  height: 18px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.form__radio .form__radio__custom {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.form__radio.form__radio--checked {
+  border-color: #0c4628;
+}
+
+.form__radio.form__radio--checked::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #0c4628;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.form__radio input {
+  position: absolute;
+  top: -100px;
+}
+
+.form__radio.form__radio--disabled {
+  cursor: not-allowed;
+}
+
+.form__radio:hover {
+  color: #333;
+  border-color: #333;
+}
+
+.button {
+  padding: 0 8px;
+  font-size: 12px;
+  height: 32px;
+  outline: none;
+  border-radius: 4px;
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  background: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: 200ms background-color;
+  width: auto;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.button + .button {
+  margin-left: 5px;
+}
+
+.button__label {
+  display: flex;
+  align-items: center;
+}
+
+.button__icon {
+  flex: 0 0 auto;
+}
+
+.button--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.button--primary {
+  background-color: #124997;
+  color: #fff;
+}
+
+.button--secondary {
+  background-color: #4c4d4d;
+  color: #333;
+}
+
+.button:not(.button--disabled).focus {
+  filter: brightness(103%);
+}
+.button:not(.button--disabled):hover {
+  filter: brightness(106%);
+}
+.button:not(.button--disabled):active,
+.button:not(.button--disabled).button__state--active {
+  filter: brightness(112%);
+}
+
+.button:focus {
+  box-shadow: 0 0 0 1px #124997;
+}
+
+.arena {
+  width: 500px;
+  height: 600px;
+  position: relative;
+}
+
+.arena img {
+  width: 100%;
+  height: 100%;
+}
+
+.chosen_players {
+  width: 400px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.chosen_players .role__icon {
+  margin: 0 20px;
+}
+
+.casting {
+  width: 300px;
+  position: absolute;
+  top: 80px;
+  left: 100px;
+}
+
+.casting__wrapper {
+  position: relative;
+  width: 300px;
+}
+
+.casting__bar {
+  width: 300px;
+  background: #ccc;
+  border-radius: 10px;
+  height: 15px;
+}
+
+.casting__progress {
+  background: rgba(120, 0, 0);
+  height: 100%;
+}
+
+.choice {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+
+.choice.form__radio.form__radio--disabled .form__radio__custom {
+  background: rgb(132, 132, 132);
+}
+
+.choice.form__radio.form__radio--checked .form__radio__custom {
+  background: transparent;
+}
+
+.choice-0 {
+  left: 80px;
+  top: 245px;
+}
+
+.choice-1 {
+  left: 234px;
+  top: 202px;
+}
+
+.choice-2 {
+  left: 234px;
+  top: 310px;
+}
+
+.choice-3 {
+  left: 234px;
+  top: 418px;
+}
+
+.resolved__summary {
+  position: fixed;
+  right: 10px;
+  top: 30px;
+  width: 300px;
+
+  background: #333;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.success {
+  color: rgb(52, 177, 45);
+}
+
+.fail {
+  color: red;
+}
+
+.resolved__text {
+  text-transform: uppercase;
+  margin-left: 20px;
 }
