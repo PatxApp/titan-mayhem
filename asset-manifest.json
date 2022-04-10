@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/titan-mayhem/static/css/main.498242d6.css",
-    "main.js": "/titan-mayhem/static/js/main.3e59b026.js",
+    "main.js": "/titan-mayhem/static/js/main.ce2b2dcc.js",
     "static/js/787.60d5f227.chunk.js": "/titan-mayhem/static/js/787.60d5f227.chunk.js",
     "index.html": "/titan-mayhem/index.html",
     "main.498242d6.css.map": "/titan-mayhem/static/css/main.498242d6.css.map",
-    "main.3e59b026.js.map": "/titan-mayhem/static/js/main.3e59b026.js.map",
+    "main.ce2b2dcc.js.map": "/titan-mayhem/static/js/main.ce2b2dcc.js.map",
     "787.60d5f227.chunk.js.map": "/titan-mayhem/static/js/787.60d5f227.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.498242d6.css",
-    "static/js/main.3e59b026.js"
+    "static/js/main.ce2b2dcc.js"
   ]
 }
